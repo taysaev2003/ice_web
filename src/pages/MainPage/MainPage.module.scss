@@ -1,0 +1,23 @@
+.main {
+  margin-top: 25px;
+  padding: 0 20px;
+
+  &__title {
+    color: #3973bb;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: stretch;
+  }
+}
+
+.marg_bot {
+  margin-top: 30px;
+}
