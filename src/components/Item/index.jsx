@@ -23,6 +23,7 @@ const Item = (item) => {
   }, [open, dispatch]);
 
   const handleModalOpen = (itemToCart) => {
+    setUpdateItemForCart(itemToCart);
     setOpen(true);
   };
 

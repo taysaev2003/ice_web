@@ -2,7 +2,11 @@ import React from 'react';
 
 import styles from './ModalWindow.module.scss';
 
-const ModalItemCount = ({ amount, countForCart, setCountForCart }) => {
+const ModalItemCount = ({
+  updateItemForCart,
+  countForCart,
+  setCountForCart,
+}) => {
   const counts = [{ count: 1 }, { count: 5 }, { count: 10 }];
 
   const updateCountForCard = (count) => {
@@ -11,17 +15,28 @@ const ModalItemCount = ({ amount, countForCart, setCountForCart }) => {
 
   return (
     <div className={styles.modal__size}>
-      {counts.map((count, index) => (
+      {updateItemForCart.category !== 4 ? (
+        counts.map((count, index) => (
+          <div
+            key={index}
+            className={`${styles.size}`}
+            onClick={() => {
+              updateCountForCard(count.count);
+            }}
+          >
+            <p>+{count.count} шт.</p>
+          </div>
+        ))
+      ) : (
         <div
-          key={index}
           className={`${styles.size}`}
           onClick={() => {
-            updateCountForCard(count.count);
+            updateCountForCard(1);
           }}
         >
-          <p>+{count.count} шт.</p>
+          <p>+1 шт.</p>
         </div>
-      ))}
+      )}
     </div>
   );
 };

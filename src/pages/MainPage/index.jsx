@@ -5,12 +5,12 @@ import styles from './MainPage.module.scss';
 
 const MainPage = ({ items }) => {
   const categories = [
-    { id: 0, title: 'Стаканчик' },
-    { id: 1, title: 'Рожок' },
-    { id: 1, title: 'Эскимо' },
-    { id: 1, title: 'Сэндвич' },
-    { id: 1, title: 'Трубочка' },
-    { id: 1, title: 'Весовое' },
+    { id: 0, title: 'Стаканчики' },
+    { id: 1, title: 'Рожки' },
+    { id: 2, title: 'Эскимо' },
+    { id: 3, title: 'Сэндвичи' },
+    { id: 5, title: 'Трубочки' },
+    { id: 4, title: 'Весовое' },
   ];
 
   return (

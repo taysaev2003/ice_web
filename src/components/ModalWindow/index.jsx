@@ -115,7 +115,7 @@ const ModalWindow = ({
             </div>
 
             <ModalItemCount
-              amount={item.amount}
+              updateItemForCart={updateItemForCart}
               countForCart={countForCart}
               setCountForCart={setCountForCart}
             />
