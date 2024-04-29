@@ -7,6 +7,7 @@
     "@mui/material": "^5.15.15",
     "@reduxjs/toolkit": "^2.2.3",
     "axios": "^1.6.8",
+    "geolib": "^3.3.4",
     "imask": "^7.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
