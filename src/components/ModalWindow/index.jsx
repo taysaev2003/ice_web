@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Fade, Modal } from '@mui/material';
 
 import styles from './ModalWindow.module.scss';
+import ModalItemCount from './ModalItemCount';
+import ModalItemKorobka from './ModalItemKorobka';
 
 const ModalWindow = ({
   open,
@@ -15,6 +17,7 @@ const ModalWindow = ({
 }) => {
   const handleClose = () => {
     setOpen(false);
+    setCountForCart(1);
   };
 
   const handleModalAddItems = () => {
@@ -110,6 +113,18 @@ const ModalWindow = ({
                 </div>
               </div>
             </div>
+
+            <ModalItemCount
+              amount={item.amount}
+              countForCart={countForCart}
+              setCountForCart={setCountForCart}
+            />
+
+            <ModalItemKorobka
+              amount={item.amount}
+              countForCart={countForCart}
+              setCountForCart={setCountForCart}
+            />
 
             <div className={styles.modal__button} onClick={handleModalAddItems}>
               <p>Добавить за {countForCart * updateItemForCart.price} ₽</p>

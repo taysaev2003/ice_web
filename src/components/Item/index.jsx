@@ -23,29 +23,10 @@ const Item = (item) => {
   }, [open, dispatch]);
 
   const handleModalOpen = (itemToCart) => {
-    setUpdateItemForCart(itemToCart);
-    if (itemToCart.category) {
-      setOpen(false);
-      addItemInCart(itemToCart);
-      return;
-    }
     setOpen(true);
   };
 
-  useEffect(() => {
-    console.log(itemsInCart);
-  }, [itemsInCart]);
-
   const addItemInCart = (itemToCart) => {
-    if (itemToCart.category === 4) {
-      setOpen(false);
-      const newItem = {
-        idInCart: uuidv4(),
-        ...itemToCart,
-      };
-      dispatch(addItem(newItem));
-      return;
-    }
     for (let i = 0; i < countForCart; i++) {
       const newItem = {
         idInCart: uuidv4(),
@@ -54,6 +35,10 @@ const Item = (item) => {
       dispatch(addItem(newItem));
     }
   };
+
+  useEffect(() => {
+    console.log(itemsInCart);
+  }, [itemsInCart]);
 
   const removeItemInCart = (item) => {
     dispatch(removeItem(item));
