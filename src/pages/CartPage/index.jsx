@@ -8,6 +8,7 @@ import Comment from '../../components/CartPageComponents/Comment';
 import EmptyCart from '../../components/CartPageComponents/EmptyCart';
 import ItemsInCart from '../../components/CartPageComponents/ItemsInCart';
 import { setPhoneError, setAddressError } from '../../redux/errorsSlice';
+import Addres from '../../components/CartPageComponents/Addres';
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const CartPage = () => {
       </div>
       <Phone />
       <PaymentMethod />
+      <Addres />
       <Comment />
     </div>
   );

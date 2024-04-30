@@ -66,7 +66,7 @@
     &__name {
       font-size: 16px;
       font-weight: 400;
-      color: #2ab79d;
+      color: #1f497d;
       max-width: 210px;
     }
 
@@ -74,7 +74,7 @@
       margin-top: 10px;
       font-size: 14px;
       font-weight: 400;
-      color: #2ab79d;
+      color: #1f497d;
 
       .price {
         font-weight: 500;
@@ -118,12 +118,12 @@
   &__text {
     font-size: 14px;
     font-weight: 400;
-    color: #2ab79d;
+    color: #1f497d;
 
     &__total {
       margin-top: 5px;
       font-size: 18px;
-      color: #2ab79d;
+      color: #1f497d;
     }
   }
 }
@@ -247,7 +247,7 @@
   margin-top: 20px;
 
   &__text {
-    color: #c6ede6;
+    color: #29b69d;
     font-size: 16px;
   }
 
@@ -271,7 +271,7 @@
   &__button {
     margin-right: 10px;
     padding: 8px;
-    background-color: #be0201;
+    background-color: #29b69d;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -293,10 +293,10 @@
     .input {
       height: 35px;
       width: 100%;
-      background: #343434;
+      background: #fff;
       border: 0;
       border-radius: 5px;
-      color: #d6d6d6;
+      color: #1f497d;
       font-size: 14px;
       padding-left: 30px;
       &:first-child {
@@ -318,7 +318,7 @@
 
   &__text {
     font-size: 16px;
-    color: #1f497d;
+    color: #2ab79d;
     &:active {
       svg {
         transform: scale(1.1) rotate(10deg);
@@ -398,63 +398,4 @@
 
 .required {
   color: red;
-}
-
-.promocod {
-  margin-top: 15px;
-  &__text {
-    color: #fff;
-    font-size: 13px;
-  }
-  &__input {
-    display: flex;
-    position: relative;
-    margin-top: 5px;
-    width: 100%;
-
-    &:active {
-      svg {
-        transform: scale(1.1) rotate(10deg);
-        transition: all ease;
-      }
-    }
-
-    .button {
-      padding: 8px;
-      background-color: #be0201;
-      color: #fff;
-      border: none;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-
-    .input {
-      height: 35px;
-      width: 100%;
-      background: #343434;
-      border: none;
-      border-radius: 0px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      color: #ffffff;
-      padding-left: 35px;
-
-      &:focus {
-        outline: black;
-      }
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    top: 54%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #be0201;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
 }

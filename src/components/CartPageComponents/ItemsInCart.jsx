@@ -12,14 +12,7 @@ import ClearCart from './ClearCart';
 
 const ItemsInCart = ({ itemsInCart }) => {
   const dispatch = useDispatch();
-  const { delPrice, itemsPrice } = useSelector((s) => s.items);
-
-  const [presentRoll, setPressentRoll] = useState(false);
-
-  useEffect(() => {
-    if (itemsPrice >= 1500) setPressentRoll(true);
-    else setPressentRoll(false);
-  }, [itemsPrice]);
+  const { itemsPrice } = useSelector((s) => s.items);
 
   const handleAddItem = (item) => {
     const newItem = {
@@ -128,36 +121,7 @@ const ItemsInCart = ({ itemsInCart }) => {
       <div className={styles.bill}>
         <div className={styles.bill__text}>
           <div>
-            +Счет: <span>{itemsPrice}</span> ₽ <br />
-            {itemsPrice >= 1000 && delPrice > 0 ? (
-              <>
-                +Бесплатная доставка
-                <br />
-              </>
-            ) : (
-              <>
-                {delPrice !== 0 && (
-                  <>
-                    +Доставка: <span>{delPrice}</span> ₽
-                  </>
-                )}
-              </>
-            )}
-            {presentRoll && (
-              <>
-                +Подарок 🎁
-                <br />
-              </>
-            )}
-            <p className={styles.bill__text__total}>
-              Итого:
-              {itemsPrice >= 1000 ? (
-                <>{itemsPrice}</>
-              ) : (
-                <>{itemsPrice + delPrice}</>
-              )}
-              ₽
-            </p>
+            <p className={styles.bill__text__total}>Итого: {itemsPrice} ₽</p>
           </div>
         </div>
       </div>

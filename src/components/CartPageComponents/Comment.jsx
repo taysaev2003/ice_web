@@ -13,7 +13,7 @@ const Comment = () => {
 
   return (
     <div className={styles.comment}>
-      <div className="comment__text">
+      <div className={styles.comment__text}>
         <p>Введите коментарий к заказу</p>
       </div>
       <div className={styles.comment__text}>
