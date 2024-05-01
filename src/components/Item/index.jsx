@@ -37,10 +37,6 @@ const Item = (item) => {
     }
   };
 
-  useEffect(() => {
-    console.log(itemsInCart);
-  }, [itemsInCart]);
-
   const removeItemInCart = (item) => {
     dispatch(removeItem(item));
   };
