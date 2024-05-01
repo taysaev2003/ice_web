@@ -90,21 +90,15 @@ const Addres = () => {
           </div>
           {address ? (
             <button
-              className={`${styles.adress__button} ${
-                itemsPrice === 0 ? styles.inactiveButton : ''
-              }`}
+              className={`${styles.adress__button}`}
               onClick={handleAddressNull}
-              disabled={itemsPrice === 0}
             >
               Изменить
             </button>
           ) : (
             <button
-              className={`${styles.adress__button} ${
-                itemsPrice === 0 ? styles.inactiveButton : ''
-              }`}
+              className={`${styles.adress__button}`}
               onClick={handleSetAddress}
-              disabled={itemsPrice === 0}
             >
               Подтвердить
             </button>
