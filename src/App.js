@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTelegram } from './hooks/useTelegram';
 
 import Layout from './components/Layout';
 import MainPage from './pages/MainPage/index';
@@ -10,6 +11,12 @@ import { getItems } from './redux/itemsSlice';
 
 function App() {
   const dispatch = useDispatch();
+
+  const { tg } = useTelegram();
+  useEffect(() => {
+    tg.ready();
+    tg.expand();
+  }, []);
 
   useEffect(() => {
     dispatch(getItems());
