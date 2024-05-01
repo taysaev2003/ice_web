@@ -87,9 +87,13 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      background: #c6ede6;
+      background: #2ab79d;
       border-radius: 5px;
-      color: #1f497d;
+      color: #fff;
+
+      &__count {
+        width: 10px;
+      }
 
       &__plus {
         height: 100%;
