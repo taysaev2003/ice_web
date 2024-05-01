@@ -21,7 +21,13 @@ const Addres = () => {
   const handleSetAddress = (address) => {
     if (addressState !== '') {
       dispatch(setAddress(addressState));
+      dispatch(setAddressError(false));
     }
+  };
+
+  const haldleInputOnClick = () => {
+    dispatch(setAddressError(null));
+    setAddressNotFound(false);
   };
 
   useEffect(() => {
@@ -71,6 +77,7 @@ const Addres = () => {
               onChange={(e) => {
                 handleChangeInput(e.target.value);
               }}
+              onClick={haldleInputOnClick}
               ref={addressRef}
             />
           </div>
