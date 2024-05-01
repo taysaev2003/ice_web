@@ -27,6 +27,7 @@ const Addres = () => {
   };
 
   const handleAddressNull = () => {
+    dispatch(setAddressError(true));
     dispatch(setAddress(false));
     setAddressState('');
   };
