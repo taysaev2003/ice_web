@@ -6,8 +6,6 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 
 import items from './redux/itemsSlice';
-import search from './redux/searchSlice';
-import count from './redux/countSlice';
 import phone from './redux/phoneSlice';
 import paymethod from './redux/paymentSlice';
 import delmethod from './redux/deliverySlice';
@@ -18,8 +16,6 @@ import blur from './utils/blur';
 const store = configureStore({
   reducer: {
     items,
-    search,
-    count,
     phone,
     paymethod,
     delmethod,

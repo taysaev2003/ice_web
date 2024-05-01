@@ -3,13 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 const deliverySlice = createSlice({
   name: 'deliveryMethod',
   initialState: {
-    delMethod: 'pickup',
     address: false,
   },
   reducers: {
-    setDeliveryMethod(state, { payload }) {
-      state.delMethod = payload;
-    },
     setAddress(state, { payload }) {
       state.address = payload;
     },
@@ -19,7 +15,6 @@ const deliverySlice = createSlice({
   },
 });
 
-export const { setDeliveryMethod, setAddress, setResetAddress } =
-  deliverySlice.actions;
+export const { setAddress, setResetAddress } = deliverySlice.actions;
 
 export default deliverySlice.reducer;
