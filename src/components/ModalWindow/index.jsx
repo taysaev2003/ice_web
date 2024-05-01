@@ -20,6 +20,14 @@ const ModalWindow = ({
     setCountForCart(1);
   };
 
+  const updateCountForCard = (count) => {
+    if (countForCart === 1) {
+      setCountForCart(count);
+    } else {
+      setCountForCart(countForCart + count);
+    }
+  };
+
   const handleModalAddItems = () => {
     setOpen(false);
     addItemInCart(item);
@@ -116,14 +124,12 @@ const ModalWindow = ({
 
             <ModalItemCount
               updateItemForCart={updateItemForCart}
-              countForCart={countForCart}
-              setCountForCart={setCountForCart}
+              updateCountForCard={updateCountForCard}
             />
 
             <ModalItemKorobka
               amount={item.amount}
-              countForCart={countForCart}
-              setCountForCart={setCountForCart}
+              updateCountForCard={updateCountForCard}
             />
 
             <div className={styles.modal__button} onClick={handleModalAddItems}>

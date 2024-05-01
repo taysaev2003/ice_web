@@ -2,16 +2,8 @@ import React from 'react';
 
 import styles from './ModalWindow.module.scss';
 
-const ModalItemCount = ({
-  updateItemForCart,
-  countForCart,
-  setCountForCart,
-}) => {
+const ModalItemCount = ({ updateItemForCart, updateCountForCard }) => {
   const counts = [{ count: 1 }, { count: 5 }, { count: 10 }];
-
-  const updateCountForCard = (count) => {
-    setCountForCart(countForCart + count);
-  };
 
   return (
     <div className={styles.modal__size}>
