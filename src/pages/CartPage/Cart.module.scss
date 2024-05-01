@@ -264,7 +264,6 @@
 
   &__list {
     display: flex;
-    gap: 5px;
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -285,7 +284,8 @@
     background-color: #29b69d;
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .inactiveButton {
@@ -306,8 +306,9 @@
       width: 100%;
       background: #fff;
       border: 0;
-      border-radius: 5px;
-      color: #1f497d;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      color: #000;
       font-size: 14px;
       padding-left: 30px;
       &:first-child {

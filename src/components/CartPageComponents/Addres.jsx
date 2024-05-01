@@ -10,6 +10,7 @@ const Addres = () => {
   const { itemsPrice } = useSelector((state) => state.items);
   const { addressIsFalse } = useSelector((state) => state.errors);
   const { phone } = useSelector((s) => s.phone);
+  const { address } = useSelector((s) => s.delmethod);
   const [addressNotFound, setAddressNotFound] = useState(false);
   const addressRef = useRef(null);
   const [addressState, setAddressState] = useState('');
@@ -18,11 +19,16 @@ const Addres = () => {
     setAddressState(e);
   };
 
-  const handleSetAddress = (address) => {
+  const handleSetAddress = () => {
     if (addressState !== '') {
       dispatch(setAddress(addressState));
       dispatch(setAddressError(false));
     }
+  };
+
+  const handleAddressNull = () => {
+    dispatch(setAddress(false));
+    setAddressState('');
   };
 
   const haldleInputOnClick = () => {
@@ -81,15 +87,27 @@ const Addres = () => {
               ref={addressRef}
             />
           </div>
-          <button
-            className={`${styles.adress__button} ${
-              itemsPrice === 0 ? styles.inactiveButton : ''
-            }`}
-            onClick={handleSetAddress}
-            disabled={itemsPrice === 0}
-          >
-            Подтвердить
-          </button>
+          {address ? (
+            <button
+              className={`${styles.adress__button} ${
+                itemsPrice === 0 ? styles.inactiveButton : ''
+              }`}
+              onClick={handleAddressNull}
+              disabled={itemsPrice === 0}
+            >
+              Изменить
+            </button>
+          ) : (
+            <button
+              className={`${styles.adress__button} ${
+                itemsPrice === 0 ? styles.inactiveButton : ''
+              }`}
+              onClick={handleSetAddress}
+              disabled={itemsPrice === 0}
+            >
+              Подтвердить
+            </button>
+          )}
         </div>
 
         <div className={styles.adress__info}>
