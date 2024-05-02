@@ -21,7 +21,7 @@ const ModalWindow = ({
   };
 
   const updateCountForCard = (count) => {
-    if (countForCart === 1) {
+    if (countForCart === 1 && count !== 1) {
       setCountForCart(count);
     } else {
       setCountForCart(countForCart + count);

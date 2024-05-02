@@ -56,6 +56,9 @@ const Item = (item) => {
           <div className={styles.item__title}>
             <p>{item.name}</p>
           </div>
+          <div className={styles.item__price}>
+            <p>{item.price} ₽</p>
+          </div>
         </div>
         {inCart ? (
           <ButtonInCart
