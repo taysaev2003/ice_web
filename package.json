@@ -10,6 +10,7 @@
     "geolib": "^3.3.4",
     "imask": "^7.6.0",
     "react": "^18.3.1",
+    "react-content-loader": "^7.0.0",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.1",
     "react-router-dom": "^6.23.0",
