@@ -31,7 +31,6 @@ const ItemsInCart = ({ itemsInCart }) => {
 
   return (
     <div className={styles.cart}>
-      <ClearCart />
       <div className={styles.cart__inner}>
         {itemsInCart?.map((item, idx) => (
           <div key={idx} className={styles.item}>
@@ -117,6 +116,7 @@ const ItemsInCart = ({ itemsInCart }) => {
             </div>
           </div>
         ))}
+        <ClearCart />
       </div>
       <div className={styles.bill}>
         <div className={styles.bill__text}>
