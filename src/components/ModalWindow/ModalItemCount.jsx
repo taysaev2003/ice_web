@@ -1,6 +1,8 @@
 import React from 'react';
 
 import styles from './ModalWindow.module.scss';
+import AddItemsCount from './itemsCounts/AddItemsCount';
+import DeleteItemsCount from './itemsCounts/DeleteItemsCount';
 
 const ModalItemCount = ({ updateItemForCart, updateCountForCard }) => {
   const counts = [{ count: 1 }, { count: 5 }, { count: 10 }];
@@ -61,8 +63,16 @@ const ModalItemCount = ({ updateItemForCart, updateCountForCard }) => {
 
   return (
     <>
-      <div className={styles.modal__size}>{addItemsCount}</div>
-      <div className={styles.modal__size}>{deleteItemsCount}</div>
+      <AddItemsCount
+        updateItemForCart={updateItemForCart}
+        updateCountForCard={updateCountForCard}
+        counts={counts}
+      />
+      <DeleteItemsCount
+        updateItemForCart={updateItemForCart}
+        updateCountForCard={updateCountForCard}
+        counts={counts}
+      />
     </>
   );
 };
