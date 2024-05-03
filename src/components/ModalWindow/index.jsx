@@ -46,7 +46,7 @@ const ModalWindow = ({
           <div className={styles.modal}>
             <div className={styles.modal__close__btn} onClick={handleClose}>
               <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
+                class="w-6 h-6 text-gray-800 dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -56,10 +56,10 @@ const ModalWindow = ({
               >
                 <path
                   stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18 17.94 6M18 18 6.06 6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>

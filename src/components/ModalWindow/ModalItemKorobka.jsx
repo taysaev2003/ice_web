@@ -11,7 +11,10 @@ const ModalItemKorobka = ({ amount, updateCountForCard }) => {
           updateCountForCard(amount);
         }}
       >
-        <p>+{amount} шт. (Коробка)</p>
+        <p>
+          <span className={styles.size__add}>+</span>
+          {amount} шт. (Коробка)
+        </p>
       </div>
     </div>
   );

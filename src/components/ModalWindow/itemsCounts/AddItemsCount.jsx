@@ -14,7 +14,10 @@ const AddItemsCount = ({ updateItemForCart, updateCountForCard, counts }) => {
               updateCountForCard(count.count);
             }}
           >
-            <p>+{count.count} шт.</p>
+            <p>
+              <span className={styles.size__add}>+</span>
+              {count.count} шт.
+            </p>
           </div>
         ))
       ) : (

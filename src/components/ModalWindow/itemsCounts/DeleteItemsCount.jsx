@@ -18,7 +18,10 @@ const DeleteItemsCount = ({
               updateCountForCard(-count.count);
             }}
           >
-            <p>-{count.count} шт.</p>
+            <p>
+              <span className={styles.size__delete}>-</span>
+              {count.count} шт.
+            </p>
           </div>
         ))
       ) : (
