@@ -19,8 +19,7 @@ const DeleteItemsCount = ({
             }}
           >
             <p>
-              <span className={styles.size__delete}>-</span>
-              {count.count} шт.
+              <span className={styles.size__delete}>-{count.count} </span>шт.
             </p>
           </div>
         ))
