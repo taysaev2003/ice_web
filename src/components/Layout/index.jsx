@@ -4,7 +4,8 @@ import Navbar from './NavBar/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTelegram } from '../../hooks/useTelegram';
 import { setItOpen } from '../../utils/blur';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import moment from 'moment-timezone';
 
 const Layout = () => {
   const { pathname } = useLocation();
@@ -24,13 +25,32 @@ const Layout = () => {
     if (pathname === '/cart') dispatch(setItOpen(false));
   });
 
+  const [cafeIsOpen, setCafeOpen] = useState(false);
+  const localTimestamp = moment.tz('Europe/Moscow');
+  const currentTime = localTimestamp.format('HH:mm');
+  useEffect(() => {
+    if (currentTime >= '10:00' && currentTime <= '21:50') {
+      setCafeOpen(true);
+    } else {
+      setCafeOpen(false);
+    }
+  }, []);
+
   return (
     <main>
       <div className={`wrapper ${open && 'blur'}`}>
-        <Header pathname={pathname} />
-        {pathname !== '/cart' && <Navbar pathname={pathname} />}
-
-        <Outlet />
+        {cafeIsOpen ? (
+          <>
+            <Header pathname={pathname} />
+            {pathname !== '/cart' && <Navbar pathname={pathname} />}
+            <Outlet />
+          </>
+        ) : (
+          <div className="loading">
+            <h2>Магазин Закрыт</h2>
+            <h6>9.00 - 17.00</h6>
+          </div>
+        )}
       </div>
     </main>
   );

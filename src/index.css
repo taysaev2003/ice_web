@@ -53,3 +53,19 @@ main {
   filter: blur(4px);
   transition: all 1.5s ease;
 }
+
+.loading {
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+  color: #55caaa;
+}
+
+.loading h6 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
