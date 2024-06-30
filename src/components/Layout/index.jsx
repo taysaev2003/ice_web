@@ -32,7 +32,7 @@ const Layout = () => {
     if (currentTime >= '9:00' && currentTime <= '19:00') {
       setCafeOpen(true);
     } else {
-      setCafeOpen(true);
+      setCafeOpen(false);
     }
   }, []);
 
