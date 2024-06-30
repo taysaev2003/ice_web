@@ -25,14 +25,14 @@ const Layout = () => {
     if (pathname === '/cart') dispatch(setItOpen(false));
   });
 
-  const [cafeIsOpen, setCafeOpen] = useState(false);
+  const [cafeIsOpen, setCafeOpen] = useState(true);
   const localTimestamp = moment.tz('Europe/Moscow');
   const currentTime = localTimestamp.format('HH:mm');
   useEffect(() => {
-    if (currentTime >= '10:00' && currentTime <= '21:50') {
+    if (currentTime >= '9:00' && currentTime <= '19:00') {
       setCafeOpen(true);
     } else {
-      setCafeOpen(false);
+      setCafeOpen(true);
     }
   }, []);
 
@@ -48,7 +48,7 @@ const Layout = () => {
         ) : (
           <div className="loading">
             <h2>Магазин Закрыт</h2>
-            <h6>9.00 - 17.00</h6>
+            <h6>9.00 - 19.00</h6>
           </div>
         )}
       </div>

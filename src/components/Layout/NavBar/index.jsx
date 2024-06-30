@@ -12,6 +12,7 @@ const Navbar = () => {
     { path: '/eskimo', title: 'Эскимо' },
     { path: '/sandwich', title: 'Сэндвич' },
     { path: '/trub', title: 'Трубочка' },
+    { path: '/briket', title: 'Брикеты' },
     { path: '/ves', title: 'Весовое' },
   ];
 

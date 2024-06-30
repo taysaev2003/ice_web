@@ -30,6 +30,7 @@ function App() {
     { path: '/eskimo', category: 2 },
     { path: '/sandwich', category: 3 },
     { path: '/ves', category: 4 },
+    { path: '/briket', category: 6 },
     { path: '/trub', category: 5 },
   ];
 
